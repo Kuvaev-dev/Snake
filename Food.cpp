@@ -13,15 +13,9 @@ Food::~Food() {
 	UnloadTexture(this->texture);
 }
 
-Vector2 Food::getPosition()
-{
-	return this->position;
-}
+Vector2 Food::getPosition() { return this->position; }
 
-void Food::setPosition(Vector2 position)
-{
-	this->position = position;
-}
+void Food::setPosition(Vector2 position) { this->position = position; }
 
 void Food::Draw() {
 	DrawTexture(this->texture, offset + this->position.x * cellSize, offset + this->position.y * cellSize, WHITE);
