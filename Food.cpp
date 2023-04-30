@@ -4,13 +4,13 @@
 
 Food::Food(std::deque<Vector2> snakeBody) {
 	Image image = LoadImage(foodImagePath);
-	texture = LoadTextureFromImage(image);
+	this->texture = LoadTextureFromImage(image);
 	UnloadImage(image);
-	position = GenerateRandomPosition(snakeBody);
+	this->position = GenerateRandomPosition(snakeBody);
 }
 
 Food::~Food() {
-	UnloadTexture(texture);
+	UnloadTexture(this->texture);
 }
 
 Vector2 Food::getPosition()
@@ -24,7 +24,7 @@ void Food::setPosition(Vector2 position)
 }
 
 void Food::Draw() {
-	DrawTexture(texture, offset + position.x * cellSize, offset + position.y * cellSize, WHITE);
+	DrawTexture(this->texture, offset + this->position.x * cellSize, offset + this->position.y * cellSize, WHITE);
 }
 
 Vector2 Food::GenerateRandomCell() {

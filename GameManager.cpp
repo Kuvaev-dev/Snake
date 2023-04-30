@@ -10,7 +10,7 @@ bool GameManager::EventTriggered(double interval)
     return false;
 }
 
-bool GameManager::ElementInDeque(Vector2 element, std::deque<Vector2>& deque)
+bool GameManager::ElementInDeque(Vector2 element, std::deque<Vector2> deque)
 {
     for (unsigned int i = 0; i < deque.size(); i++) {
         if (Vector2Equals(deque.at(i), element)) {

@@ -7,6 +7,6 @@ class GameManager
 {
 public:
 	bool EventTriggered(double interval);
-	bool ElementInDeque(Vector2 element, std::deque<Vector2>& deque);
+	bool ElementInDeque(Vector2 element, std::deque<Vector2> deque);
 };
 

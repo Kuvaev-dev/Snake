@@ -4,27 +4,21 @@
 
 Game::Game() {
 	InitAudioDevice();
-	eatSound = LoadSound(eatSoundPath);
-	wallSound = LoadSound(wallSoundPath);
+	this->eatSound = LoadSound(eatSoundPath);
+	this->wallSound = LoadSound(wallSoundPath);
 }
 
 Game::~Game() {
-	UnloadSound(eatSound);
-	UnloadSound(wallSound);
+	UnloadSound(this->eatSound);
+	UnloadSound(this->wallSound);
 	CloseAudioDevice();
 }
 
-Snake& Game::getSnake() {
-	return this->snake;
-}
+Snake& Game::getSnake() { return this->snake; }
 
-void Game::setRunning(bool running) {
-	this->running = running;
-}
+void Game::setRunning(bool running) { this->running = running; }
 
-int Game::getScore() {
-	return this->score;
-}
+int Game::getScore() { return this->score; }
 
 void Game::Draw() {
 	this->food.Draw();
