@@ -10,9 +10,9 @@ float cellSize = 25.;
 int cellCount = 25;
 double lastUpdateTime = 0;
 float offset = 75.;
-const char* eatSoundPath = "assets/sounds/eat.mp3";
-const char* wallSoundPath = "assets/sounds/wall.mp3";
-const char* foodImagePath = "assets/graphics/food.png";
+const char* eatSoundPath = "./assets/sounds/eat.mp3";
+const char* wallSoundPath = "./assets/sounds/wall.mp3";
+const char* foodImagePath = "./assets/graphics/food.png";
 
 int main() {
     InitWindow(2 * offset + cellSize * cellCount, 2 * offset + cellSize * cellCount, "Snake | Kuvaiev Mykyta");
