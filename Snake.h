@@ -1,7 +1,8 @@
 #include "GameParameters.h"
+#include "GameObject.h"
 #include <deque>
 
-class Snake
+class Snake : public GameObject
 {
 private:
     std::deque<Vector2> body = {
@@ -18,8 +19,8 @@ public:
     bool getSegment();
     void setSegment(bool addSegment);
 
-    void Draw();
-    void Update();
+    void Draw() override;
+    void Update() override;
     void Reset();
 };
 

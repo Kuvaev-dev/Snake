@@ -1,8 +1,9 @@
 #include "Snake.h"
 #include "Food.h"
+#include "GameObject.h"
 #include <deque>
 
-class Game
+class Game : public GameObject
 {
 private:
     Snake snake = Snake();
@@ -19,8 +20,8 @@ public:
     void setRunning(bool running);
     int getScore();
 
-    void Draw();
-    void Update();
+    void Draw() override;
+    void Update() override;
     void CheckCollisionWithFood();
     void CheckCollisionWithEdges();
     void CheckCollisionWithTail();
