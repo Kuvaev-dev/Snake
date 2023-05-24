@@ -2,7 +2,9 @@
 
 std::deque<Vector2> Snake::getBody() { return this->body; }
 
-Vector2 Snake::getDirection() { return this->direction; }
+float Snake::getXDirection() { return this->direction.x; }
+
+float Snake::getYDirection() { return this->direction.y; }
 
 void Snake::setDirection(float x, float y) { this->direction = { x, y }; }
 

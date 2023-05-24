@@ -20,6 +20,8 @@ void Game::setRunning(bool running) { this->running = running; }
 
 int Game::getScore() { return this->score; }
 
+void Game::setDirectionForSnake(int x, int y) { this->snake.setDirection(x, y); }
+
 void Game::Draw() {
 	this->food.Draw();
 	this->snake.Draw();

@@ -14,7 +14,8 @@ private:
     Vector2 direction = { 1, 0 };
 public:
     std::deque<Vector2> getBody();
-    Vector2 getDirection();
+    float getXDirection();
+    float getYDirection();
     void setDirection(float x, float y);
     bool getSegment();
     void setSegment(bool addSegment);

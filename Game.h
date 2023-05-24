@@ -19,6 +19,7 @@ public:
     Snake& getSnake();
     void setRunning(bool running);
     int getScore();
+    void setDirectionForSnake(int x, int y);
 
     void Draw() override;
     void Update() override;
